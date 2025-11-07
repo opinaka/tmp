@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
-import logo from '/logo.png';
 
 export default function Menu() {
   return (
-    <nav>
-      <img src={logo} alt="Logo" style={{ width: '40px' }} />
-      <Link to="/">Accueil</Link>
-      <Link to="/formulaire">Formulaire</Link>
+    <nav className="menu d-flex align-items-center p-3 bg-light">
+      <img src="/logo.png" alt="Logo" style={{ width: '40px', marginRight: '10px' }} />
+      <Link to="/" className="me-3">Accueil</Link>
+      <Link to="/formulaire" className="me-3">Formulaire</Link>
       <Link to="/contact">Contact</Link>
     </nav>
   );

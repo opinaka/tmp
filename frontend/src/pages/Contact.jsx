@@ -18,12 +18,12 @@ export default function Contact() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
-    });
+    }).then(() => alert('Message envoyé'));
   };
 
   return (
-    <div>
-      <h2>Formulaire de contact</h2>
+    <div className="container mt-4">
+      <h2 className="mb-3">Formulaire de contact</h2>
       <Form schema={schema} validator={validator} onSubmit={handleSubmit} />
     </div>
   );

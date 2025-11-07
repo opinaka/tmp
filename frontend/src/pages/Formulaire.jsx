@@ -15,11 +15,12 @@ const schema = {
 export default function Formulaire() {
   const handleSubmit = ({ formData }) => {
     console.log("Données soumises :", formData);
+    // POST vers backend si nécessaire
   };
 
   return (
-    <div>
-      <h2>Formulaire JSON Schema</h2>
+    <div className="container mt-4">
+      <h2 className="mb-3">Formulaire JSON Schema</h2>
       <Form schema={schema} validator={validator} onSubmit={handleSubmit} />
     </div>
   );
