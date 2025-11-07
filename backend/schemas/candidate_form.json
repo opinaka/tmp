@@ -1,0 +1,10 @@
+{
+  "title": "Formulaire Candidat",
+  "type": "object",
+  "required": ["nom", "email", "cv"],
+  "properties": {
+    "nom": { "type": "string", "title": "Nom" },
+    "email": { "type": "string", "format": "email", "title": "Email" },
+    "cv": { "type": "string", "title": "Lien vers le CV" }
+  }
+}

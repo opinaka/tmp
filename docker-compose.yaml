@@ -9,4 +9,7 @@ services:
       - "8082:80"
     volumes:
       - ./frontend/config.yaml:/usr/share/nginx/html/config.yaml
-
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
