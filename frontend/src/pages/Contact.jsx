@@ -1,18 +1,16 @@
 import Form from '@rjsf/bootstrap-4';
 import validator from '@rjsf/validator-ajv8';
-
-const schema = {
-  title: "Contact",
-  type: "object",
-  required: ["nom", "email", "message"],
-  properties: {
-    nom: { type: "string", title: "Nom" },
-    email: { type: "string", format: "email", title: "Email" },
-    message: { type: "string", title: "Message" }
-  }
-};
+import { useEffect, useState } from 'react';
 
 export default function Contact() {
+  const [schema, setSchema] = useState(null);
+
+  useEffect(() => {
+    fetch('/schemas/contact.schema.json')
+      .then(res => res.json())
+      .then(setSchema);
+  }, []);
+
   const handleSubmit = ({ formData }) => {
     fetch('http://localhost:8000/contact', {
       method: 'POST',
@@ -22,9 +20,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="page-content">
       <h2 className="mb-3">Formulaire de contact</h2>
-      <Form schema={schema} validator={validator} onSubmit={handleSubmit} />
+      {schema ? (
+        <Form schema={schema} validator={validator} onSubmit={handleSubmit} />
+      ) : (
+        <p>Chargement du formulaire…</p>
+      )}
     </div>
   );
 }

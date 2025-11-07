@@ -1,0 +1,10 @@
+{
+  "title": "Contact",
+  "type": "object",
+  "required": ["nom", "email", "message"],
+  "properties": {
+    "nom": { "type": "string", "title": "Nom" },
+    "email": { "type": "string", "format": "email", "title": "Email" },
+    "message": { "type": "string", "title": "Message" }
+  }
+}
