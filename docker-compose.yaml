@@ -2,11 +2,11 @@
 services:
   frontend:
     build:
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile
     container_name: wpa_frontend
     ports:
       - "8082:80"
     volumes:
-      - ./config.yaml:/usr/share/nginx/html/config.yaml
+      - ./frontend/config.yaml:/usr/share/nginx/html/config.yaml
 
