@@ -1,0 +1,20 @@
+{
+  "short_name": "Candidats",
+  "name": "WPA Candidats",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+"icons": [
+  {
+    "src": "icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  },
+  {
+    "src": "icon-250.png",
+    "sizes": "250x250",
+    "type": "image/png"
+  }
+]
+}

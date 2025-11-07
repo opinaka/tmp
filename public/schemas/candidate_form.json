@@ -1,0 +1,31 @@
+{
+  "title": "Formulaire Candidat",
+  "type": "object",
+  "required": ["nom", "email", "cv"],
+  "properties": {
+    "nom": {
+      "type": "string",
+      "title": "Nom complet"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Adresse email"
+    },
+    "cv": {
+      "type": "string",
+      "title": "CV (fichier)",
+      "contentEncoding": "base64",
+      "contentMediaType": "application/pdf"
+    },
+    "linkedin": {
+      "type": "string",
+      "title": "Profil LinkedIn",
+      "format": "uri"
+    },
+    "motivation": {
+      "type": "string",
+      "title": "Lettre de motivation"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wpa_frontend
+    ports:
+      - "8082:80"
+    volumes:
+      - ./config.yaml:/usr/share/nginx/html/config.yaml
+

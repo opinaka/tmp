@@ -1,0 +1,8 @@
+api:
+  base_url: "http://localhost:8000"
+  endpoints:
+    create_annonce: "/api/annonce"
+    delete_annonce: "/api/annonce"
+    stats_annonce: "/api/annonce/stats"
+headers:
+  email_header: "X-User-Email"
